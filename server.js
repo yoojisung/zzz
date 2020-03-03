@@ -7,22 +7,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
 
-var indexRouter = require('./routers/index');
-var signupRouter = require('./routers/signup');
-var moreinfoRouter = require('./routers/moreinfo');
-var depositRouter = require('./routers/deposit');
-var loginRouter = require('./routers/login');
-var forgotRouter = require('./routers/forgot');
-var mainRouter = require('./routers/main');
-var chargeRouter = require('./routers/charge');
-var getPointRouter = require('./routers/getPoint');
-var depositRefundRouter = require('./routers/depositRefund');
-var mypageRouter = require('./routers/mypage');
-var historyRouter = require('./routers/history'); 
-var getallRouter = require('./routers/getall');
-var finishedRouter = require('./routers/finished');
-var getproRouter = require('./routers/getpro');
-var testsolRouter = require('./routers/testsol');
+
 app = express();
 var port = process.env.PORT || 3000;
 
@@ -33,22 +18,6 @@ app.set('view engine', 'ejs');//어떤 엔진을 사용하겠다.
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-app.use('/', indexRouter);
-app.use('/', signupRouter);
-app.use('/', moreinfoRouter);
-app.use('/', depositRouter);
-app.use('/', mypageRouter);
-app.use('/login', loginRouter);
-app.use('/forgot', forgotRouter);
-app.use('/main', mainRouter);
-app.use('/charge', chargeRouter);
-app.use('/getPoint', getPointRouter);
-app.use('/depositRefund', depositRefundRouter);
-app.use('/history', historyRouter);
-app.use('/getall', getallRouter);
-app.use('/finished', finishedRouter);
-app.use('/getpro', getproRouter);
-app.use('/testsol', testsolRouter);
 
 
 
